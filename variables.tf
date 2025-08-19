@@ -12,6 +12,10 @@ variable "env" {
   type = string
 }
 
-variable "instance_type" {
-  type = string
+variable "instance_configs" {
+  type = map(string)
+  default = {
+    "backend"  = "t3.micro"
+    "frontend" = "t3.micro"
+  }
 }
