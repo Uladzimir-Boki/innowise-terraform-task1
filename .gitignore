@@ -1,0 +1,9 @@
+.terraform/
+.terraform.locl.hcl
+*.tfstate
+*.tfstate.backup
+
+crash.log
+
+.terraformrc
+terraform.rc
