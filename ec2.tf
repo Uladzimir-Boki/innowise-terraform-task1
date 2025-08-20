@@ -61,6 +61,10 @@ resource "aws_instance" "my-ec2-instance" {
 
   instance_type = each.value
 
+  lifecycle {
+    ignore_changes = [ user_data ]
+  }
+
   tags = {
     Name = "${local.name_prefix}-${each.key}-ec2"
   }
